@@ -1,0 +1,9 @@
+<h2>Demo objects:</h2>
+
+<div *ngFor="let demoObject of demoObjects">
+
+  <p>{{demoObject.id}}.
+    <a [title]="demoObject.name + ' details'" [routerLink]="['/demo-objects', demoObject.id]">{{ demoObject.name }}</a>
+  </p>
+
+</div>

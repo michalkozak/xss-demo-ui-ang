@@ -1,0 +1,19 @@
+<h4>Details of a new demo object:</h4>
+
+<form #demoObjectForm="ngForm">
+  <p><strong>name:</strong></p>
+  <input type="text" class="form-control" id="name" required maxlength="256" [(ngModel)]="newDemoObject.name" name="name" #name="ngModel">
+  <div *ngIf="name.invalid && isSubmitted">
+    <div [hidden]="!name.errors?.['required']" class="alert">Name is required.</div>
+  </div>
+  <p><strong>description:</strong></p>
+  <input type="text" class="form-control" id="description" maxlength="1024" [(ngModel)]="newDemoObject.description" name="description" #description="ngModel">
+  <div><button class="btn btn-success" (click)="addDemoObject(demoObjectForm.form.valid)">Submit</button> Content-Type: <strong>application/json</strong> </div>
+  <div *ngIf="errorMessage">
+    <div class="alert">{{ errorMessage }}</div>
+  </div>
+</form>
+<hr/>
+<a class="upload-button" [title]="'add by uploading file'" [routerLink]="['/demo-objects/upload']">&#x21E7; add by uploading a file &#xD83D;&#xDCCE;</a>
+<hr/>
+<a class="return" [title]="'return to list'" [routerLink]="['/demo-objects']">&#x2190; return to list &#xD834;&#xDF06;</a>

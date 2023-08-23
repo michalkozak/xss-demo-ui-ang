@@ -1,0 +1,27 @@
+
+.upload-button {
+  background-color: white;
+  color: #268c21;
+  text-align: right;
+}
+
+form {
+  width: 100%;
+}
+
+input {
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+  width: 100%;
+}
+
+.alert {
+  color: red;
+}
+
+input#name {
+  width: 60%;
+}

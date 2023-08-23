@@ -1,0 +1,11 @@
+<h4>Details of demo object <span *ngIf="demoObject">{{demoObject.id}}</span></h4>
+
+<div *ngIf="demoObject">
+  <div class="demo-details">
+    <p><strong>name:</strong> {{ demoObject.name }}</p>
+    <p><strong>description:</strong> {{ demoObject.description }}</p>
+  </div>
+  <button type="button" (click)="showHiddenDescription(demoObject)">Show hidden bank account</button>
+  <hr/>
+  <a class="return" [title]="'return to list'" [routerLink]="['/demo-objects']">&#x2190; return to list &#xD834;&#xDF06;</a>
+</div>

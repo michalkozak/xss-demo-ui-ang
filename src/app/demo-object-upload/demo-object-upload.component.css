@@ -1,0 +1,19 @@
+
+input[type="file"] {
+  color: white;
+  background-color: #268c21;
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.alert {
+  color: red;
+}

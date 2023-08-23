@@ -1,0 +1,11 @@
+<h4>Upload a file with details of a demo object:</h4>
+
+<form>
+  <input type="file" class="form-control" id="file" name="file" (change)="onChange($event)">
+  <div><button class="btn btn-success" (click)="upload()">Submit</button> Content-Type: <strong>application/json</strong> and <strong>multipart/form-data</strong> </div>
+  <div *ngIf="errorMessage">
+    <div class="alert">{{ errorMessage }}</div>
+  </div>
+</form>
+<hr/>
+<a class="return" [title]="'return to list'" [routerLink]="['/demo-objects']">&#x2190; return to list &#xD834;&#xDF06;</a>
